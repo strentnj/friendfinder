@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Friend Finder Survey</title>
+
+<!--boostrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!--javascript-->
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body>
+  <div class="container">
+    <hr>
+    <h1>Survey Questions</h1>
+    <hr>
+
+    <h3><bold>About You</bold></h3>
+    <h4>Name(Required)</h4>
+    <input type="text" id="name" required>
+    <br>
+    <br>
+    <h4>Link to a profile Image(Required)</h4>
+    <input type="text" id="image-link" required>
+
+    <hr> 
+
+
+    <h3><bold>Question 1</bold></h3>
+    <h4>I care about how others look at me.</h4>
+    <select id="q1">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><bold>Question 2</bold></h3>
+    <h4>I like going out.</h4>
+    <select id="q2">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><bold>Question 3</bold></h3>
+    <h4>I prefer public transportation.</h4>
+    <select id="q3">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><bold>Question 4</bold></h3>
+    <h4>I like to laugh.</h4>
+    <select id="q4">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><bold>Question 5</bold></h3>
+    <h4>I prefer mountains to the beach.</h4>
+    <select id="q5">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><bold>Question 6</bold></h3>
+    <h4>If my friend's car broke down in the middle of the night, I would go help them out.</h4>
+    <select id="q6">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><bold>Question 7</bold></h3>
+    <h4>I follow the 5 second rule when I drop food.</h4>
+    <select id="q7">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><bold>Question 8</bold></h3>
+    <h4>The glass is ALWAYS half full when it has wine in it.</h4>
+    <select id="q8">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><bold>Question 9</bold></h3>
+    <h4>40 is the new 30.</h4>
+    <select id="q9">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><bold>Question 10</bold></h3>
+    <h4>I am a morning person.</h4>
+    <select id="q10">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <hr>
+    <button type="button" class="btn btn-lg btn-primary" id="submit-survey">Find me a friend!</button>
+    <hr>
+
+  <!-- Modal -->
+  <div id="resultsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="matchName"></h2>
+          <img id="matchImg" src="" alt="pic">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  </div>
+  <script type="text/javascript" src="survey.js"></script>
+
+<!--didntf inish submit functionality-->
+</body>
+</html>
